@@ -34,16 +34,8 @@
 		// if single post visited 
 		add_action("wp_head", array( $this,"single_post_view_count") );
 
-		
+
 	}
-
-	
-
-
-
-
-	
-
 	// Pages codes..
 	function add_page_column( $columns ) {
 		$columns["ID"] = ("ID");
