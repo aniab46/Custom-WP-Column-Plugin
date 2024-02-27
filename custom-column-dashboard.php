@@ -19,8 +19,14 @@
  class CCD_custom_column{
 	function __construct(){
 		add_action("init", array( $this,"init") );
+		require_once('custom_post.php');
+
+		
+		
 	}
+
 	function init(  ) {
+		
 		add_filter("manage_posts_columns", array( $this,"add_columns") );
 		add_action("manage_posts_custom_column", array( $this,"customize_column"),10, 2);
 
@@ -122,6 +128,9 @@
 		}
 
 	}
+
+	
+	
 
 }
 
